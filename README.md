@@ -49,7 +49,7 @@ MovieRatingsAnalysis/
 │   └── task3_movie_watching_trends.py
 ├── docker-compose.yml
 └── README.md
-```
+```dock
 
 
 
@@ -211,6 +211,46 @@ A list of departments meeting the specified criteria, along with the correspondi
 | Adult       | 145            | 38%        |
 
 ---
+### ** Task 1 : My Approach**
+
+**Data Loading:**
+
+Load the dataset movie_ratings_data.csv using Spark's read.csv API.
+
+Define the schema to ensure proper data types for each column.
+
+**Data Filtering:**
+
+Filter users who have IsBingeWatched = True.
+
+**Grouping and Aggregation:**
+
+Group the filtered data by AgeGroup.
+
+Count the number of binge-watchers in each age group.
+
+**Proportion Calculation:**
+
+Calculate the percentage of binge-watchers within each age group.
+
+**Output:**
+
+Save the results to a CSV file (binge_watching_patterns.csv).
+
+**Findings:**
+After running the analysis, the following insights were derived:
+
+Age Group	Binge Watchers	Total Users	Percentage
+Senior	21	34	61.76%
+Teen	23	35	65.71%
+Adult	16	31	51.61%
+
+
+Teenagers have the highest binge-watching rate at 65.71%.
+
+Seniors follow closely with a binge-watching rate of 61.76%.
+
+Adults have the lowest binge-watching rate at 51.61%.
 
 ### **2. Identify Churn Risk Users**  
 
@@ -237,7 +277,26 @@ A count of users who **canceled their subscriptions and had low engagement**, hi
 
 
 
----
+### ** Task 2 : My Approach**
+
+**Approach**
+
+**Data Filtering:**
+
+Filter users who have SubscriptionStatus = 'Canceled'.
+
+Further filter users with WatchTime < 100 minutes.
+
+**Count At-Risk Users:**
+
+Count the total number of users meeting the above criteria.
+
+**Output:**
+
+Save the results to a CSV file (churn_risk_users.csv).
+
+**Findings:**
+The analysis identified 11 users who are at risk of churn. These users have canceled their subscriptions and have low watch time (<100 minutes).
 
 ### **3. Trend Analysis Over the Years**  
 
@@ -265,7 +324,37 @@ A summary of **movie-watching trends** over the years, indicating peak years for
 | 2023         | 2800           |
 
 
----
+### ** Task 2 : My Approach**
+
+**Approach**
+
+**1. Group by Watched Year:**
+Group the dataset by WatchedYear.
+
+Count the number of movies watched in each year.
+
+**2. Analyze Trends:**
+
+Identify patterns and compare year-over-year growth in movie consumption.
+
+**3. Output:**
+Save the results to a CSV file (movie_watching_trends.csv).
+
+**Findings:** 
+
+Watched Year	Movies Watched
+2018	19
+2019	19
+2020	11
+2021	14
+2022	17
+2023	20
+The highest movie consumption occurred in 2023, with 20 movies watched.
+
+The lowest movie consumption occurred in 2020, with 11 movies watched.
+
+There was a noticeable dip in movie-watching activity in 2020, likely due to external factors such as the COVID-19 pandemic.
+
 
 ## **Grading Criteria**
 
