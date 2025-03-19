@@ -240,17 +240,17 @@ Save the results to a CSV file (binge_watching_patterns.csv).
 **Findings:**
 After running the analysis, the following insights were derived:
 
-Age Group	Binge Watchers	Total Users	Percentage
-Senior	21	34	61.76%
-Teen	23	35	65.71%
-Adult	16	31	51.61%
+AgeGroup,BingeWatchers,TotalUsers,Percentage
+Senior,17,32,53.13
+Teen,18,35,51.43
+Adult,18,33,54.55
 
 
-Teenagers have the highest binge-watching rate at 65.71%.
+Adults have the highest binge-watching rate at 54.55%.
 
-Seniors follow closely with a binge-watching rate of 61.76%.
+Seniors follow closely with a binge-watching rate of 53.13%.
 
-Adults have the lowest binge-watching rate at 51.61%.
+Teens have the almost similar binge-watching rate at 51.43%.
 
 ### **2. Identify Churn Risk Users**  
 
@@ -296,7 +296,7 @@ Count the total number of users meeting the above criteria.
 Save the results to a CSV file (churn_risk_users.csv).
 
 **Findings:**
-The analysis identified 11 users who are at risk of churn. These users have canceled their subscriptions and have low watch time (<100 minutes).
+The analysis identified 10 users who are at risk of churn. These users have canceled their subscriptions and have low watch time (<100 minutes).
 
 ### **3. Trend Analysis Over the Years**  
 
@@ -324,7 +324,7 @@ A summary of **movie-watching trends** over the years, indicating peak years for
 | 2023         | 2800           |
 
 
-### ** Task 2 : My Approach**
+### ** Task 3 : My Approach**
 
 **Approach**
 
@@ -342,16 +342,16 @@ Save the results to a CSV file (movie_watching_trends.csv).
 
 **Findings:** 
 
-Watched Year	Movies Watched
-2018	19
-2019	19
-2020	11
-2021	14
-2022	17
-2023	20
-The highest movie consumption occurred in 2023, with 20 movies watched.
+WatchedYear,MoviesWatched
+2018,14
+2019,17
+2020,15
+2021,17
+2022,22
+2023,15
+The highest movie consumption occurred in 2022, with 22 movies watched.
 
-The lowest movie consumption occurred in 2020, with 11 movies watched.
+The lowest movie consumption occurred in 2018, with 14 movies watched.
 
 There was a noticeable dip in movie-watching activity in 2020, likely due to external factors such as the COVID-19 pandemic.
 
